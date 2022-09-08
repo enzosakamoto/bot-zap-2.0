@@ -20,17 +20,23 @@ while True:
 
     # Condição para adicionar contato na lista de contatos
     if eventos == '-botao_contato-':
-        contatos.append(valores['-contato-'])
-        janela['-contato-'].update('')
-        janela['-output-'].update('')
-        exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+        if valores['-contato-'] != '':
+            contatos.append(valores['-contato-'])
+            janela['-contato-'].update('')
+            janela['-output-'].update('')
+            exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+        else:
+            sg.popup('Escreva um contato válido!')
 
     # Condição para adicionar mensagem na lista de mensagens
     if eventos == '-botao_mensagem-':
-        mensagens.append(valores['-mensagem-'])
-        janela['-mensagem-'].update('')
-        janela['-output-'].update('')
-        exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+        if valores['-mensagem-'] != '':
+            mensagens.append(valores['-mensagem-'])
+            janela['-mensagem-'].update('')
+            janela['-output-'].update('')
+            exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+        else:
+            sg.popup('Escreva uma mensagem válida!')
 
     # Condição para adicionar a quantidade de mensagens a serem enviadas
     if eventos == '-botao_qntmensagem-':
@@ -48,9 +54,7 @@ while True:
         janela['-contato-'].update('')
         janela['-quantidade-'].update('')
         janela['-output-'].update('')
-        qntMensagem = 0
-        contatos = []
-        mensagens = []
+        mensagens, contatos, qntMensagem = [], [], 0
         exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
 
     # Condição para enviar todos os dados armazenados

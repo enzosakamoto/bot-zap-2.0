@@ -1,15 +1,16 @@
 import pyautogui
 from time import sleep
 
-# Box Mensagem 1486, 989
-# Box Pesquisar 1149, 126
-# Contato pesquisado 1126, 256
+# Resolução 1920 x 1080
+# Box Mensagem 933, 979
+# Box Pesquisar 367, 199
+# Contato pesquisado 367, 330
 
 # Procura contato e clica nele
 def procuraContato(contato):
-    pyautogui.click(1149, 126, duration = 2)
+    pyautogui.click(367, 199, duration = 2)
     pyautogui.write(contato)
-    pyautogui.click(1126, 256, duration = 2)
+    pyautogui.click(367, 330, duration = 2)
     sleep(2)
 
 # Escreve a mensagem
@@ -17,13 +18,21 @@ def escreveMensagem(mensagem):
     pyautogui.write(mensagem)
     pyautogui.press('enter')
 
+# Função para formatar o print no Output
+def printFormatado(lista):
+    i = 0
+    while i < len(lista):
+        print(lista[i], end = '')
+        if i < len(lista) - 1:
+            print(', ', end = '')
+        i += 1
+
+# Função para exibir as variáveis no campo de Output
 def exibeOutput(contatos, mensagens, quantidade):
     print('Contatos adicionados:')
-    for e in contatos:
-        print(e, end = ', ')
+    printFormatado(lista = contatos)
     print('\n\nMensagens adicionadas:')
-    for e in mensagens:
-        print(e, end = ', ')
+    printFormatado(lista = mensagens)
     print('\n\nMensagens a serem enviadas [para cada mensagem adicionada]:')
     print(quantidade)
 
