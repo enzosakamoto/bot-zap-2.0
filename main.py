@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from interface import *
 from funcoes import *
 
@@ -33,9 +34,35 @@ while True:
 
     # Condição para adicionar a quantidade de mensagens a serem enviadas
     if eventos == '-botao_qntmensagem-':
-        qntMensagem = int(valores['-quantidade-'])
+        if valores['-quantidade-'].isdigit(): # Verifica se a quantidade digitada é um número
+            qntMensagem = int(valores['-quantidade-'])
+            janela['-quantidade-'].update('')
+            janela['-output-'].update('')
+            exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+        else:
+            sg.popup('Digite um valor inteiro!')
+
+    # Condição para limpar todos os dados
+    if eventos == 'Limpar tudo!':
+        janela['-mensagem-'].update('')
+        janela['-contato-'].update('')
         janela['-quantidade-'].update('')
         janela['-output-'].update('')
+        qntMensagem = 0
+        contatos = []
+        mensagens = []
         exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+
+    # Condição para enviar todos os dados armazenados
+    if eventos == 'Enviar':
+        if len(contatos) != 0 and len(mensagens) != 0 and qntMensagem != 0: # Verifica se os campos foram preenchidos
+            for contato in contatos:
+                procuraContato(contato = contato)
+                for mensagem in mensagens:
+                    for i in range(qntMensagem):
+                        escreveMensagem(mensagem = mensagem)
+                    sleep(2)
+        else:
+            sg.popup('Campos obrigatórios faltando!')
 
 janela.close()

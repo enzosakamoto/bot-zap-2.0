@@ -7,9 +7,10 @@ from time import sleep
 
 # Procura contato e clica nele
 def procuraContato(contato):
-    pyautogui.click(1149, 126, duration = 1)
+    pyautogui.click(1149, 126, duration = 2)
     pyautogui.write(contato)
-    pyautogui.click(1126, 256, duration = 1)
+    pyautogui.click(1126, 256, duration = 2)
+    sleep(2)
 
 # Escreve a mensagem
 def escreveMensagem(mensagem):
