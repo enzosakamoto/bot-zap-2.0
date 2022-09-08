@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from interface import *
 from funcoes import *
 
