@@ -13,4 +13,4 @@ Abra o WhatsApp Web no navegador em tela maximizada e deixe o programa aberto po
 # Cancelar o envio de mensagens
 Para o cancelamento do processo de envio de mensagens, basta mover o cursor do mouse para qualquer canto da tela. O programa encerrará automaticamente.
 
-![readme-zap](https://user-images.githubusercontent.com/98707474/189118712-8f9de57b-9f78-437d-add9-d21690e13f68.jpg)
+![readme-image](https://user-images.githubusercontent.com/98707474/189259663-d69fd7c9-3fb7-4170-b01b-dd8d234cd62c.png)
