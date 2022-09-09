@@ -18,6 +18,7 @@ def procuraContatoDark(contato):
 def procuraContatoLight(contato):
     pyautogui.click('assets/botao-pesquisar-light.png', duration = 2)
     pyautogui.write(contato)
+    sleep(5)
     x_pesquisar, y_pesquisar = pyautogui.position()
     pyautogui.click(x_pesquisar, y_pesquisar + 129, duration = 2)
     sleep(2)

@@ -25,7 +25,7 @@ while True:
             janela['-output-'].update('')
             exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
         else:
-            sg.popup('Aviso!', 'Escreva um contato válido!')
+            sg.popup('Escreva um contato válido!')
 
     # Condição para adicionar mensagem na lista de mensagens
     if eventos == '-botao_mensagem-':
@@ -35,7 +35,7 @@ while True:
             janela['-output-'].update('')
             exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
         else:
-            sg.popup('Aviso!', 'Escreva uma mensagem válida!')
+            sg.popup('Escreva uma mensagem válida!')
 
     # Condição para adicionar a quantidade de mensagens a serem enviadas
     if eventos == '-botao_qntmensagem-':
@@ -45,7 +45,7 @@ while True:
             janela['-output-'].update('')
             exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
         else:
-            sg.popup('Aviso!', 'Digite um valor inteiro!')
+            sg.popup('Digite um valor inteiro!')
 
     # Condição para limpar todos os dados
     if eventos == 'Limpar tudo!':
@@ -74,8 +74,8 @@ while True:
                             escreveMensagem(mensagem = mensagem)
                         sleep(2)
             else: # Retorna as demais condições
-                sg.popup('Aviso!', "Marque as checkbox's corretamente!")
+                sg.popup("Marque as checkbox's corretamente!")
         else:
-            sg.popup('Aviso!', 'Campos obrigatórios faltando!')
+            sg.popup('Campos obrigatórios faltando!')
 
 janela.close()
