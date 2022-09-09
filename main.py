@@ -25,7 +25,7 @@ while True:
             janela['-output-'].update('')
             exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
         else:
-            sg.popup('Escreva um contato válido!')
+            sg.popup('Aviso!', 'Escreva um contato válido!')
 
     # Condição para adicionar mensagem na lista de mensagens
     if eventos == '-botao_mensagem-':
@@ -35,7 +35,7 @@ while True:
             janela['-output-'].update('')
             exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
         else:
-            sg.popup('Escreva uma mensagem válida!')
+            sg.popup('Aviso!', 'Escreva uma mensagem válida!')
 
     # Condição para adicionar a quantidade de mensagens a serem enviadas
     if eventos == '-botao_qntmensagem-':
@@ -45,7 +45,7 @@ while True:
             janela['-output-'].update('')
             exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
         else:
-            sg.popup('Digite um valor inteiro!')
+            sg.popup('Aviso!', 'Digite um valor inteiro!')
 
     # Condição para limpar todos os dados
     if eventos == 'Limpar tudo!':
@@ -59,13 +59,23 @@ while True:
     # Condição para enviar todos os dados armazenados
     if eventos == 'Enviar':
         if len(contatos) != 0 and len(mensagens) != 0 and qntMensagem != 0: # Verifica se os campos foram preenchidos
-            for contato in contatos:
-                procuraContato(contato = contato)
-                for mensagem in mensagens:
-                    for i in range(qntMensagem):
-                        escreveMensagem(mensagem = mensagem)
-                    sleep(2)
+            if valores['-light-'] == True and valores['-dark-'] == False: # Verifica se o tema é Light
+                for contato in contatos:
+                    procuraContatoLight(contato = contato)
+                    for mensagem in mensagens:
+                        for i in range(qntMensagem):
+                            escreveMensagem(mensagem = mensagem)
+                        sleep(2)
+            elif valores['-dark-'] == True and valores['-light-'] == False: # Verifica se o tema é Dark
+                for contato in contatos:
+                    procuraContatoDark(contato = contato)
+                    for mensagem in mensagens:
+                        for i in range(qntMensagem):
+                            escreveMensagem(mensagem = mensagem)
+                        sleep(2)
+            else: # Retorna as demais condições
+                sg.popup('Aviso!', "Marque as checkbox's corretamente!")
         else:
-            sg.popup('Campos obrigatórios faltando!')
+            sg.popup('Aviso!', 'Campos obrigatórios faltando!')
 
 janela.close()

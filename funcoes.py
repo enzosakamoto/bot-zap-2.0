@@ -6,11 +6,20 @@ from time import sleep
 # Box Pesquisar 367, 199
 # Contato pesquisado 367, 330
 
-# Procura contato e clica nele
-def procuraContato(contato):
-    pyautogui.click(367, 199, duration = 2)
+# Procura contato e clica nele (tema Dark)
+def procuraContatoDark(contato):
+    pyautogui.click('assets/botao-pesquisar.png', duration = 2)
     pyautogui.write(contato)
-    pyautogui.click(367, 330, duration = 2)
+    x_pesquisar, y_pesquisar = pyautogui.position()
+    pyautogui.click(x_pesquisar, y_pesquisar + 129, duration = 2)
+    sleep(2)
+
+# Procura contato e clica nele (tema Light)
+def procuraContatoLight(contato):
+    pyautogui.click('assets/botao-pesquisar-light.png', duration = 2)
+    pyautogui.write(contato)
+    x_pesquisar, y_pesquisar = pyautogui.position()
+    pyautogui.click(x_pesquisar, y_pesquisar + 129, duration = 2)
     sleep(2)
 
 # Escreve a mensagem
