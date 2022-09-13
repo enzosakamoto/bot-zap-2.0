@@ -10,6 +10,6 @@ layout = [
     [sg.Push(), sg.Text('Selecione o seu tema do WhatsApp Web:'), sg.Push()],
     [sg.Push(), sg.Checkbox('Light Mode/Modo Claro', key = '-light-'), sg.Checkbox('Dark Mode/Modo Escuro', key = '-dark-'), sg.Push()],
     [sg.Push(), sg.Output(key = '-output-', size = (60,10)), sg.Push()],
-    [sg.Push(), sg.Button('Enviar'), sg.Button('Limpar tudo!'), sg.Button('Sair'), sg.Push()],
+    [sg.Push(), sg.Button('Enviar'), sg.Button('Limpar mensagens!'), sg.Button('Limpar tudo!'), sg.Button('Sair'), sg.Push()],
     [sg.Push(), sg.Text('Versão 0.2')]
 ]

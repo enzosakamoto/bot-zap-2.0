@@ -56,6 +56,12 @@ while True:
         mensagens, contatos, qntMensagem = [], [], 0
         exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
 
+    # Condição para limpar as mensagens
+    if eventos == 'Limpar mensagens!':
+        janela['-output-'].update('')
+        mensagens = []
+        exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+
     # Condição para enviar todos os dados armazenados
     if eventos == 'Enviar':
         if len(contatos) != 0 and len(mensagens) != 0 and qntMensagem != 0: # Verifica se os campos foram preenchidos
