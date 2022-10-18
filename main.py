@@ -1,8 +1,14 @@
 from interface import *
 from funcoes import *
 
+# Coordenadas
+arquivo = open("res.txt", "r")
+lista_coords = arquivo.readlines()
+
+coordenadas = lista_coords[1].split(", ")
+
 # Interface
-janela = sg.Window('Bot do zap', layout)
+janela = sg.Window('Bot do zap', layout, finalize = True)
 
 # Lista de variáveis
 contatos = []
@@ -72,7 +78,7 @@ while True:
     if eventos == 'Enviar':
         if len(contatos) != 0 and len(mensagens) != 0 and qntMensagem != 0: # Verifica se os campos foram preenchidos
             for contato in contatos:
-                procuraContato(contato = contato)
+                procuraContato(contato = contato, coord_x = int(coordenadas[0]), coord_y = int(coordenadas[1]))
                 for mensagem in mensagens:
                     for i in range(qntMensagem):
                         escreveMensagem(mensagem = mensagem)
@@ -81,4 +87,5 @@ while True:
         else:
             sg.popup('Campos obrigatórios faltando!')
 
+arquivo.close()
 janela.close()
