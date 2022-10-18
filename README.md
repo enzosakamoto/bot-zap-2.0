@@ -1,7 +1,7 @@
 # Bot do Zap 2.0
 
 Bot para envio de mensagens automáticas no WhatsApp com PyAutoGui.<br/>
-Atualmente, funciona apenas para monitores com resolução 1920 x 1080.
+Atualmente, funciona apenas para monitores com resolução 1920 x 1080, exclusivamente no WhatsAPP Web do Opera GX.
 
 # Como usar
 Abra o WhatsApp Web no navegador em tela maximizada e deixe o programa aberto por cima dele (como na imagem). Preencha todos os campos do programa e clique em enviar. Após isso, não mexa no mouse até o fim do processo.

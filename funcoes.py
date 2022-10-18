@@ -7,18 +7,9 @@ from time import sleep
 # Contato pesquisado 367, 330
 
 # Procura contato e clica nele (tema Dark)
-def procuraContatoDark(contato):
-    pyautogui.click('assets/botao-pesquisar.png', duration = 2)
+def procuraContato(contato):
+    pyautogui.click(74, 115, duration = 2)
     pyautogui.write(contato)
-    x_pesquisar, y_pesquisar = pyautogui.position()
-    pyautogui.click(x_pesquisar, y_pesquisar + 129, duration = 2)
-    sleep(2)
-
-# Procura contato e clica nele (tema Light)
-def procuraContatoLight(contato):
-    pyautogui.click('assets/botao-pesquisar-light.png', duration = 2)
-    pyautogui.write(contato)
-    sleep(5)
     x_pesquisar, y_pesquisar = pyautogui.position()
     pyautogui.click(x_pesquisar, y_pesquisar + 129, duration = 2)
     sleep(2)

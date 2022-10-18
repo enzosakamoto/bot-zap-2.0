@@ -62,25 +62,22 @@ while True:
         mensagens = []
         exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
 
+    # Condição para limpar os contatos
+    if eventos == 'Limpar contatos!':
+        janela['-output-'].update('')
+        contatos = []
+        exibeOutput(contatos = contatos, mensagens = mensagens, quantidade = qntMensagem)
+
     # Condição para enviar todos os dados armazenados
     if eventos == 'Enviar':
         if len(contatos) != 0 and len(mensagens) != 0 and qntMensagem != 0: # Verifica se os campos foram preenchidos
-            if valores['-light-'] == True and valores['-dark-'] == False: # Verifica se o tema é Light
-                for contato in contatos:
-                    procuraContatoLight(contato = contato)
-                    for mensagem in mensagens:
-                        for i in range(qntMensagem):
-                            escreveMensagem(mensagem = mensagem)
-                        sleep(2)
-            elif valores['-dark-'] == True and valores['-light-'] == False: # Verifica se o tema é Dark
-                for contato in contatos:
-                    procuraContatoDark(contato = contato)
-                    for mensagem in mensagens:
-                        for i in range(qntMensagem):
-                            escreveMensagem(mensagem = mensagem)
-                        sleep(2)
-            else: # Retorna as demais condições
-                sg.popup("Marque as checkbox's corretamente!")
+            for contato in contatos:
+                procuraContato(contato = contato)
+                for mensagem in mensagens:
+                    for i in range(qntMensagem):
+                        escreveMensagem(mensagem = mensagem)
+                    sleep(2)
+
         else:
             sg.popup('Campos obrigatórios faltando!')
 
