@@ -9,7 +9,9 @@ from time import sleep
 # Procura contato e clica nele (tema Dark)
 def procuraContato(contato, coord_x, coord_y):
     pyautogui.click(coord_x, coord_y, duration = 2)
+    sleep(0.5)
     pyautogui.write(contato)
+    sleep(0.5)
     x_pesquisar, y_pesquisar = pyautogui.position()
     pyautogui.click(x_pesquisar, y_pesquisar + 129, duration = 2)
     sleep(2)
