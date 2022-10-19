@@ -7,11 +7,11 @@ Atualmente, funciona apenas para monitores com resolução 1920 x 1080, exclusiv
 Abra o WhatsApp Web no navegador em tela maximizada e deixe o programa aberto por cima dele (como na imagem). Preencha todos os campos do programa e clique em enviar. Após isso, não mexa no mouse até o fim do processo.
 
 # Cancelar o envio de mensagens
-Para o cancelamento do processo de envio de mensagens, basta mover o cursor do mouse para qualquer canto da tela. O programa encerrará automaticamente.
+Para o cancelamento do processo de envio de mensagens, basta mover o cursor do mouse para qualquer extremidade da tela. O programa encerrará automaticamente.
 
 # Instalação das dependências (CMD)
 
-pip install -r requirements.txt
+pip install -r requirements.txt ou execute o arquivo ".bat"
 
 # Executável
 O executável desse programa Python está dentro da pasta 'dist' e dentro de um arquivo '.rar'. Para executar, basta extrair os arquivos e rodar o 'bot-do-zap'.<br/>
