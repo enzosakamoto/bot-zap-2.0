@@ -1,0 +1,2 @@
+Digite abaixo somente as coordenadas do ícone da Lupa do seu WhatsApp Web no formato (XX, YY). Qualquer outro formato resultará em erro!
+219, 202
