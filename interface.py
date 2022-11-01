@@ -10,5 +10,5 @@ layout = [
     [sg.Push(), sg.Output(key = '-output-', size = (60,10)), sg.Push()],
     [sg.Push(), sg.Button('Limpar mensagens!'), sg.Button('Limpar contatos!'), sg.Button('Limpar tudo!'), sg.Push()],
     [sg.Push(), sg.Button('Enviar'), sg.Button('Sair'), sg.Push()],
-    [sg.Push(), sg.Text('Versão 0.2')]
+    [sg.Push(), sg.Text('Versão 1.0')]
 ]
