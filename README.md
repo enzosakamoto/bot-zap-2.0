@@ -14,7 +14,7 @@ O executável desse programa Python está dentro da pasta 'dist'. Para que o pro
 # Como usar
 Abra o WhatsApp Web no navegador em tela maximizada e deixe o programa aberto por cima dele (como na imagem). Preencha todos os campos do programa e clique em enviar. Após isso, não mexa no mouse até o fim do processo.
 
-![readme-image](https://user-images.githubusercontent.com/98707474/189259663-d69fd7c9-3fb7-4170-b01b-dd8d234cd62c.png)
+![foto zap](https://user-images.githubusercontent.com/98707474/199249888-bfa3fa86-a3a5-4063-8507-7e33d6ca038b.png)
 
 # Cancelar o envio de mensagens
 Para o cancelamento do processo de envio de mensagens, basta mover o cursor do mouse para qualquer extremidade da tela. O programa encerrará automaticamente.
