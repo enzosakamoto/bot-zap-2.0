@@ -6,7 +6,7 @@ from time import sleep
 # Box Pesquisar 367, 199
 # Contato pesquisado 367, 330
 
-# Procura contato e clica nele (tema Dark)
+# Procura contato e clica nele
 def procuraContato(contato, coord_x, coord_y):
     pyautogui.click(coord_x, coord_y, duration = 2)
     sleep(0.5)
